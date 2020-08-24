@@ -1,0 +1,10 @@
+<h1>Cocktails#index</h1>
+<p>Find me in app/views/cocktails/index.html.erb</p>
+<% @cocktails.each do |c| %>
+<p> <%= link_to c.name, cocktail_path(c) %>
+<%= link_to "delete this cocktail", cocktail_path(c), method: :delete %></p>
+<br>
+<% end %>
+
+
+<%= link_to "create new cocktail + ", new_cocktail_path %></p>
